@@ -62,7 +62,7 @@
                     calle=valor.location.street;
 
 
-                    $("#informacion").append("<p>"+nombre+apellido+email+foto+ciudad+codigopostal+estado+calle+"</p>")
+                    $("#informacion").append("<p style='background-image:url("+foto+");background-size:contain;background-repeat: no-repeat;padding-left:200px'>"+nombre+" "+apellido+"<br>"+email+"<br>"+ciudad+" "+codigopostal+" "+estado+" "+calle+"</p>")
                 })
             })
 
