@@ -50,11 +50,26 @@
                 method: "GET"
             });
             jqxhr.done(function (data) {
-                console.log(data);
+                $(jqxhr.responseJSON.results).each(function (indice, valor) {
 
+                    nombre =valor.name.first;
+                    apellido=valor.name.last;
+                    email=valor.email;
+                    foto=valor.picture.large;
+                    ciudad=valor.location.city;
+                    codigopostal=valor.location.postcode;
+                    estado=valor.location.state;
+                    calle=valor.location.street;
+
+
+                    $("#informacion").append("<p>"+nombre+apellido+email+foto+ciudad+codigopostal+estado+calle+"</p>")
+                })
             })
+
         })
     })
+
+
 
 </script>
 
